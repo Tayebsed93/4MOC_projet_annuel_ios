@@ -14,8 +14,6 @@
 		6DF6208B1EB39FA8007ECB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6208A1EB39FA8007ECB49 /* Assets.xcassets */; };
 		6DF6208E1EB39FA8007ECB49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF6208C1EB39FA8007ECB49 /* LaunchScreen.storyboard */; };
 		6DF620961EB3A013007ECB49 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF620951EB3A013007ECB49 /* LoginController.swift */; };
-		6DF620981EB3C15A007ECB49 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF620971EB3C15A007ECB49 /* Todo.swift */; };
-		6DF6209A1EB3C186007ECB49 /* Todo+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF620991EB3C186007ECB49 /* Todo+Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +26,6 @@
 		6DF6208D1EB39FA8007ECB49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DF6208F1EB39FA8007ECB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF620951EB3A013007ECB49 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		6DF620971EB3C15A007ECB49 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		6DF620991EB3C186007ECB49 /* Todo+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Todo+Networking.swift"; sourceTree = "<group>"; };
 		8A526E8A66888D5B28F93516 /* Pods-PoubelleConnecte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoubelleConnecte.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoubelleConnecte/Pods-PoubelleConnecte.release.xcconfig"; sourceTree = "<group>"; };
 		A032AFB35D4841A9783D7CFB /* Pods-PoubelleConnecte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoubelleConnecte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoubelleConnecte/Pods-PoubelleConnecte.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,8 +87,6 @@
 				6DF6208C1EB39FA8007ECB49 /* LaunchScreen.storyboard */,
 				6DF6208F1EB39FA8007ECB49 /* Info.plist */,
 				6DF620871EB39FA8007ECB49 /* PoubelleConnecte.xcdatamodeld */,
-				6DF620971EB3C15A007ECB49 /* Todo.swift */,
-				6DF620991EB3C186007ECB49 /* Todo+Networking.swift */,
 			);
 			path = PoubelleConnecte;
 			sourceTree = "<group>";
@@ -223,8 +217,6 @@
 				6DF620891EB39FA8007ECB49 /* PoubelleConnecte.xcdatamodeld in Sources */,
 				6DF620961EB3A013007ECB49 /* LoginController.swift in Sources */,
 				6DF620811EB39FA8007ECB49 /* AppDelegate.swift in Sources */,
-				6DF6209A1EB3C186007ECB49 /* Todo+Networking.swift in Sources */,
-				6DF620981EB3C15A007ECB49 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

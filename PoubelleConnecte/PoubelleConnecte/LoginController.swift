@@ -63,8 +63,10 @@ class LoginController: UIViewController {
         
         
         
-        let task = session4.dataTask(with: request as URLRequest) { (data, response, error) in
-            guard let _: Data = data, let _: URLResponse = response, error == nil else {
+        let task = session4.dataTask(with: request as URLRequest)
+        { (data, response, error) in
+            guard let _: Data = data, let _: URLResponse = response, error == nil else
+            {
 
                 print("ERROR: \(error?.localizedDescription)")
                 
@@ -102,7 +104,9 @@ class LoginController: UIViewController {
             } catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
             }
-        };task.resume()
+
+        }
+        ;task.resume()
     }
 
     func passData(apiKey : String) {

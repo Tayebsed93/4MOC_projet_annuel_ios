@@ -81,7 +81,7 @@ class LoginController: UIViewController {
             
             let task = session4.dataTask(with: request as URLRequest) { (data, response, error) in
                 guard let _: Data = data, let _: URLResponse = response, error == nil else {
-                    print("*****error")
+                    print("ERROR")
                     return
                 }
                 let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)

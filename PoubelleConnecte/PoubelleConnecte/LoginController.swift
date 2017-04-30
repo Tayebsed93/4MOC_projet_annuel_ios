@@ -69,7 +69,6 @@ class LoginController: UIViewController {
                 print("ERROR: \(error?.localizedDescription)")
                 
                 self.alerteMessage(message: (error?.localizedDescription)!)
-                self.api = false
                 return
             }
             let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
@@ -100,10 +99,6 @@ class LoginController: UIViewController {
                 */
                 
 
-                
-                
-                
-                
             } catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
             }

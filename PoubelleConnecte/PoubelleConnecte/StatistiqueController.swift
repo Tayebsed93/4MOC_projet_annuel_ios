@@ -20,12 +20,12 @@ class StatistiqueController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear( animated)
-        
+        /*
         // 1. create chart view
         let chart = BarChartView(frame: self.subContainerView.frame)
         
         // 2. generate chart data entries
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let yVals: [Int] = [ 3, 8, 30, 10, 50, 30, 23, 40, 90, 10, 40, 100]
         var entries = [ BarChartDataEntry]()
         
@@ -71,8 +71,16 @@ class StatistiqueController: UIViewController {
         
         // 4. add chart to UI
         self.subContainerView.addSubview( chart)
+        */
+        
+        ///////
+        
+
+        
+
         
     }
+
 
     
     override func viewDidLoad() {

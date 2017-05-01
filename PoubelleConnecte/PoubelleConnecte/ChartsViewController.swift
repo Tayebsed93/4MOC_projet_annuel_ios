@@ -65,10 +65,7 @@ class ChartsViewController: UIViewController {
                                     }
                                     if let nombre = poubelle["nombre"]{
                                         self.dates.append(nombre as! Int)
-                                        //print(nombre)
-                                        //print("///////////////")
-                                        print(self.dates)
-                                        print("///////////////")
+  
                                         self.updateChartData(money: self.dates)
                                     }
                                 }
@@ -127,7 +124,7 @@ class ChartsViewController: UIViewController {
         }
         
         // 3. chart setup
-        let set = PieChartDataSet( values: entries, label: "Pie Chart")
+        let set = PieChartDataSet( values: entries, label: "")
         // this is custom extension method. Download the code for more details.
         var colors: [UIColor] = []
         

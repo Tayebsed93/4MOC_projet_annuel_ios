@@ -26,11 +26,89 @@ class ChartsViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        //callAPIPoubelleDate()
-        //updateChartData()
+        callAPIPoubelleDate()
         
         
     }
+    
+    
+    func callAPIPoubelleDate() {
+        
+        
+        
+        let apiKey = "226f791098549052f704eb37b2ae7999"
+        let config = URLSessionConfiguration.default
+        let userPasswordString = "username@gmail.com:password"
+        let userPasswordData = userPasswordString.data(using: String.Encoding.utf8)
+        
+        print(apiKey)
+        config.httpAdditionalHeaders = ["Authorization" : apiKey]
+        let session = URLSession(configuration: config)
+        
+        var running = false
+        let url = NSURL(string: "http://localhost:8888/PoubelleAPI/API/v1/poubelles/date")
+        let task = session.dataTask(with: url as! URL) {
+            ( data, response, error) in
+            if let httpResponse = response as? HTTPURLResponse {
+                let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                
+                //JSONSerialization in Object
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+                    DispatchQueue.main.async()
+                        {
+                            if let poubelles = json["poubelle"] as? [[String: Any]] {
+                                
+                                for poubelle in poubelles {
+                                    if let date = poubelle["mois"]{
+                                        
+                                    }
+                                    if let nombre = poubelle["nombre"]{
+                                        self.dates.append(nombre as! Int)
+                                        //print(nombre)
+                                        //print("///////////////")
+                                        print(self.dates)
+                                        print("///////////////")
+                                        self.updateChartData(money: self.dates)
+                                    }
+                                }
+                            }
+                            
+                            if let messageError = json["message"]
+                            {
+                                self.alerteMessage(message: messageError as! String)
+                            }
+                            
+                            
+                            
+                    }
+                    /*
+                     DispatchQueue.main.async() {
+                     self.dismiss(animated: true, completion: nil)
+                     }
+                     */
+                    
+                    
+                } catch let error as NSError {
+                    print("Failed to load: \(error.localizedDescription)")
+                }
+            }
+            running = false
+        }
+        
+        
+        
+        running = true
+        task.resume()
+        
+        while running {
+            print("waiting...")
+            sleep(1)
+        }
+        
+        print(self.dates)
+    }
+
 
     
     func updateChartData(money : [Int])  {

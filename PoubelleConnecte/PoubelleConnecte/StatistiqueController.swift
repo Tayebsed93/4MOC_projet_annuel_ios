@@ -14,19 +14,22 @@ import Charts
 
 class StatistiqueController: UIViewController {
     
-    @IBOutlet weak var subContainerView: UIView!
-    @IBOutlet weak var refresh: UIButton!
     
+    @IBOutlet weak var test: UIView!
+    var passapikey = String()
+    
+    @IBOutlet weak var containerView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear( animated)
-        /*
+        
         // 1. create chart view
-        let chart = BarChartView(frame: self.subContainerView.frame)
+        let chart = BarChartView(frame: self.test.frame)
         
         // 2. generate chart data entries
         var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let yVals: [Int] = [ 3, 8, 30, 10, 50, 30, 23, 40, 90, 10, 40, 100]
+        //let yVals: [Int] = []
         var entries = [ BarChartDataEntry]()
         
         for (i, v) in yVals.enumerated() {
@@ -43,10 +46,10 @@ class StatistiqueController: UIViewController {
         let data = BarChartData( dataSet: set)
         chart.data = data
         // no data text
-        chart.noDataText = "No data available"
+        //chart.noDataText = "No data available"
         // user interaction
         chart.isUserInteractionEnabled = false
-        
+
         
         // 3a. style
         /*
@@ -70,8 +73,8 @@ class StatistiqueController: UIViewController {
         
         
         // 4. add chart to UI
-        self.subContainerView.addSubview( chart)
-        */
+        self.test.addSubview( chart)
+        
         
         ///////
         
@@ -82,9 +85,13 @@ class StatistiqueController: UIViewController {
     }
 
 
+    @IBAction func deconnecteButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     

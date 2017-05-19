@@ -21,6 +21,7 @@ class ChartsViewController: UIViewController {
     public var loginUrlString = "/poubelles/date"
     
     var dates = [Int]()
+    var passapikey = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +31,19 @@ class ChartsViewController: UIViewController {
         
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //callAPIPoubelleDate()
+
+    }
+    
     
     
     func callAPIPoubelleDate() {
         
         
         
-        let apiKey = "226f791098549052f704eb37b2ae7999"
+        let apiKey = passapikey
         let config = URLSessionConfiguration.default
         let userPasswordString = "username@gmail.com:password"
         let userPasswordData = userPasswordString.data(using: String.Encoding.utf8)
@@ -99,11 +106,9 @@ class ChartsViewController: UIViewController {
         task.resume()
         
         while running {
-            print("waiting...")
-            sleep(1)
+            //sleep(UInt32(0.1))
         }
         
-        print(self.dates)
     }
 
 
@@ -117,6 +122,7 @@ class ChartsViewController: UIViewController {
         //let money = [10, 20, 10, 10,10, 10,20,10,10,10,10,10]
         var entries = [PieChartDataEntry]()
         for (index, value) in money.enumerated() {
+            print(index)
             let entry = PieChartDataEntry()
             entry.y = Double(value)
             entry.label = track[index]
@@ -149,6 +155,35 @@ class ChartsViewController: UIViewController {
         pieChartView.holeRadiusPercent = 0.2
         pieChartView.transparentCircleColor = UIColor.clear
         self.view.addSubview(pieChartView)
+        
+
+        
+        
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
+         var dataEntries: [ChartDataEntry] = []
+         
+         for i in 0..<months.count {
+         let dataEntry = ChartDataEntry(x: unitsSold[i], y: Double(i))
+         dataEntries.append(dataEntry)
+         }
+ 
+        var colors2: [UIColor] = []
+
+        
+        for i in 0..<months.count {
+            let dataEntry = ChartDataEntry(x: unitsSold[i], y: Double(i))
+            //let dataEntry = ChartDataEntry(x: Double(i), y: unitsSold[i])
+            dataEntries.append(dataEntry)
+        }
+ 
+        
+        let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "")
+        var dataSets = [IChartDataSet]()
+        dataSets.append(lineChartDataSet)
+        LineChartData(dataSets: dataSets)
+        let lineChartData = LineChartData(dataSets: dataSets)
+        lineChartView.data = lineChartData
         
     }
     

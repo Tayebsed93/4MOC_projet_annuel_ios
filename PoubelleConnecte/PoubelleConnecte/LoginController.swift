@@ -27,7 +27,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        txtEMail.text = "a@hot.fr"
+        txtEMail.text = "t@hot.fr"
         txtMdp.text = "a"
     }
     
@@ -111,10 +111,33 @@ class LoginController: UIViewController {
 
     func passData(apiKey : String) {
         print(apiKey)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "StatistiqueController") as! StatistiqueController
-        self.present(newViewController, animated: true, completion: nil)
+        
 
+
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabVc = storyboard.instantiateViewController(withIdentifier: "tbController") as! UITabBarController
+        
+        
+        /////////****** 1er controller
+        //Convertie la tabViewController en UINavigationController
+        let navigation = tabVc.viewControllers?[0] as! UINavigationController
+        
+        //Convertie la UINavigationController en UIViewController (Statistique)
+        let statistiqueController = navigation.topViewController as? StatistiqueController
+        
+        //Envoie le nom et le mot de passe à la page statistique
+        statistiqueController?.passapikey = apiKey
+        
+        
+        /////////****** 2nd controller
+        
+        let chartsViewController = tabVc.viewControllers![1] as! ChartsViewController
+        //Envoie l'apikey à la page ChartsViewController
+        chartsViewController.passapikey = apiKey
+        
+        //Change la page vers Statistique
+        self.present(tabVc, animated: true, completion: nil)
     }
     
     func alerteMessage(message : String) {

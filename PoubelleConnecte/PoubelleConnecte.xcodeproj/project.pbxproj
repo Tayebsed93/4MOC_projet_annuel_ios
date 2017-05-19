@@ -63,6 +63,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6D2EB52F1EBE0E43003D60D0 /* Statistique */ = {
+			isa = PBXGroup;
+			children = (
+				6DB003041EB63EFF0063DBEF /* StatistiqueController.swift */,
+			);
+			name = Statistique;
+			sourceTree = "<group>";
+		};
+		6D2EB5301EBE0E5D003D60D0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6DF620951EB3A013007ECB49 /* LoginController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		6D2EB5311EBE0E69003D60D0 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				6DF7D98C1EB77F6100FCDD1A /* ChartsViewController.swift */,
+			);
+			name = Charts;
+			sourceTree = "<group>";
+		};
 		6DF620741EB39FA8007ECB49 = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +108,10 @@
 		6DF6207F1EB39FA8007ECB49 /* PoubelleConnecte */ = {
 			isa = PBXGroup;
 			children = (
+				6D2EB5311EBE0E69003D60D0 /* Charts */,
+				6D2EB5301EBE0E5D003D60D0 /* Login */,
+				6D2EB52F1EBE0E43003D60D0 /* Statistique */,
 				6DF620801EB39FA8007ECB49 /* AppDelegate.swift */,
-				6DF620951EB3A013007ECB49 /* LoginController.swift */,
-				6DB003041EB63EFF0063DBEF /* StatistiqueController.swift */,
-				6DF7D98C1EB77F6100FCDD1A /* ChartsViewController.swift */,
 				6DF620841EB39FA8007ECB49 /* Main.storyboard */,
 				6DF6208A1EB39FA8007ECB49 /* Assets.xcassets */,
 				6DF6208C1EB39FA8007ECB49 /* LaunchScreen.storyboard */,

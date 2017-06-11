@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="1900" y="1882"/>
         </scene>
-        <!--Item-->
+        <!--Remplissage Controller-->
         <scene sceneID="qBm-a6-h6a">
             <objects>
                 <viewController id="W2I-As-BDD" customClass="RemplissageController" customModule="PoubelleConnecte" customModuleProvider="target" sceneMemberID="viewController">
@@ -297,7 +297,7 @@
                             <constraint firstAttribute="centerY" secondItem="a1g-pI-8TK" secondAttribute="centerY" constant="25" id="mXh-6V-Uhc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AEb-Az-DuN"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="AEb-Az-DuN"/>
                     <connections>
                         <outlet property="circleProgressView" destination="a1g-pI-8TK" id="I5T-9j-X6o"/>
                         <outlet property="progressLabel" destination="nl0-GZ-VSO" id="19c-T5-fdH"/>

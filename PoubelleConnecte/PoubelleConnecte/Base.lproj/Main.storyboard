@@ -165,7 +165,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RO8-Pr-qIh" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RO8-Pr-qIh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -180,19 +180,33 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Lze-fv-t09">
-                        <barButtonItem key="leftBarButtonItem" title="Se deconnecter" id="XeH-5b-f43">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="XeH-5b-f43">
                             <connections>
                                 <action selector="deconnecteButton:" destination="5Yy-OZ-rHN" id="5xR-6a-ZmP"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="uVk-r7-5Ux">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2017" borderStyle="roundedRect" placeholder="2017" textAlignment="natural" minimumFontSize="17" id="eFF-Z9-2uZ">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="AnneeTextFieldAction:" destination="5Yy-OZ-rHN" eventType="primaryActionTriggered" id="nBM-V1-gNv"/>
+                                    <outlet property="delegate" destination="5Yy-OZ-rHN" id="3hf-2p-kta"/>
+                                </connections>
+                            </textField>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="anneeText" destination="eFF-Z9-2uZ" id="nkF-6a-yIi"/>
                         <outlet property="test" destination="RO8-Pr-qIh" id="asG-sE-psp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Jg-YU-CFb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="-848"/>
+            <point key="canvasLocation" x="2705" y="-849"/>
         </scene>
         <!--Statistique ControllerBIS-->
         <scene sceneID="YQW-iG-cbG">
@@ -252,7 +266,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-9Q-LAx">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl0-GZ-VSO">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erreur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl0-GZ-VSO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="2VB-cS-JIK"/>
@@ -277,9 +291,6 @@
                                     <constraint firstItem="ZsO-iO-CH4" firstAttribute="centerX" secondItem="a1g-pI-8TK" secondAttribute="centerX" id="r1z-Bl-P4u"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="-0.40000000000000002"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
                                         <real key="value" value="10"/>

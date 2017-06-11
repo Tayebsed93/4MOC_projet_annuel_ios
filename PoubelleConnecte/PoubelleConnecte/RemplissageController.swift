@@ -29,10 +29,6 @@ class RemplissageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //Call circular change size 
-        //circularSize(money : [Int])
-        
 
     }
     
@@ -54,6 +50,7 @@ class RemplissageController: UIViewController {
                 self.nb = Double(element)
             }
         }
+        
         nf.numberStyle = NumberFormatter.Style.decimal
         nf.maximumFractionDigits = 2
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,7 +84,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TVj-CN-KNQ" kind="relationship" relationship="viewControllers" id="FuD-ky-dxa"/>
-                        <segue destination="Vd0-ZA-caC" kind="relationship" relationship="viewControllers" id="t8x-iy-6BF"/>
+                        <segue destination="W2I-As-BDD" kind="relationship" relationship="viewControllers" id="pZK-ks-4Ax"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7s-9m-I9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,7 +96,7 @@
             <objects>
                 <navigationController id="TVj-CN-KNQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="xpb-XB-NVL"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ZsC-yc-763">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ZsC-yc-763">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="2273" y="-848"/>
         </scene>
-        <!--Statistique Controller-->
+        <!--Statistique ControllerBIS-->
         <scene sceneID="YQW-iG-cbG">
             <objects>
-                <viewController id="mxt-8l-sGz" customClass="StatistiqueController" customModule="PoubelleConnecte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mxt-8l-sGz" customClass="StatistiqueControllerBIS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ceo-ZM-bh0"/>
                         <viewControllerLayoutGuide type="bottom" id="AAx-l6-J79"/>
@@ -226,7 +226,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hv-dT-7j1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272.8000000000002" y="-148.87556221889056"/>
+            <point key="canvasLocation" x="1900" y="1882"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qBm-a6-h6a">
+            <objects>
+                <viewController id="W2I-As-BDD" customClass="RemplissageController" customModule="PoubelleConnecte" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HgX-k9-d6e"/>
+                        <viewControllerLayoutGuide type="bottom" id="nE8-rd-9hU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3BL-u6-N4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-pI-8TK" customClass="CircleProgressView" customModule="CircleProgressView">
+                                <rect key="frame" x="63" y="184" width="250" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZsO-iO-CH4">
+                                        <rect key="frame" x="64" y="114" width="120" height="21"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gzd-7w-jGd">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-9Q-LAx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl0-GZ-VSO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="2VB-cS-JIK"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="IIo-ZP-Ciz"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="AWw-or-nHF"/>
+                                    <constraint firstItem="ZsO-iO-CH4" firstAttribute="centerY" secondItem="a1g-pI-8TK" secondAttribute="centerY" id="ZGO-kP-eIW"/>
+                                    <constraint firstAttribute="width" constant="250" id="mZj-S2-cuG"/>
+                                    <constraint firstItem="ZsO-iO-CH4" firstAttribute="centerX" secondItem="a1g-pI-8TK" secondAttribute="centerX" id="r1z-Bl-P4u"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="-0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="trackImage" value="progressImage"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13483161660000001" green="0.78997087610000005" blue="0.89798144040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="a1g-pI-8TK" secondAttribute="centerX" id="2Pl-AF-Hb3"/>
+                            <constraint firstAttribute="centerY" secondItem="a1g-pI-8TK" secondAttribute="centerY" constant="25" id="mXh-6V-Uhc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="AEb-Az-DuN"/>
+                    <connections>
+                        <outlet property="circleProgressView" destination="a1g-pI-8TK" id="I5T-9j-X6o"/>
+                        <outlet property="progressLabel" destination="nl0-GZ-VSO" id="19c-T5-fdH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3o-Wf-TxG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="540"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="progressImage" width="250" height="250"/>
+    </resources>
 </document>

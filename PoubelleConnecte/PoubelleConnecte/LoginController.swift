@@ -131,10 +131,21 @@ class LoginController: UIViewController {
         
         
         /////////****** 2nd controller
-        
+        //Chart
+        /*
         let chartsViewController = tabVc.viewControllers![1] as! ChartsViewController
         //Envoie l'apikey à la page ChartsViewController
         chartsViewController.passapikey = apiKey
+        
+        //Change la page vers Statistique
+        self.present(tabVc, animated: true, completion: nil)
+         */
+        
+        //Remplissage
+        let remplissageController = tabVc.viewControllers![1] as! RemplissageController
+
+        //Envoie l'apikey à la page ChartsViewController
+        remplissageController.passapikey = apiKey
         
         //Change la page vers Statistique
         self.present(tabVc, animated: true, completion: nil)

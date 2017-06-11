@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F847AA54472D31119F61929D9BECAC6"
+               BlueprintIdentifier = "E084ADC1FFE5751B87B1FEBFB94926CA"
                BuildableName = "Pods_PoubelleConnecte.framework"
                BlueprintName = "Pods-PoubelleConnecte"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F847AA54472D31119F61929D9BECAC6"
+            BlueprintIdentifier = "E084ADC1FFE5751B87B1FEBFB94926CA"
             BuildableName = "Pods_PoubelleConnecte.framework"
             BlueprintName = "Pods-PoubelleConnecte"
             ReferencedContainer = "container:Pods.xcodeproj">
